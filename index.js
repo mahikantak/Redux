@@ -1,13 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import App from './components/App';
-import reducers from './reducers';
-
-ReactDOM.render(
-  <Provider store={createStore(reducers)}>
-    <App />
-  </Provider>,
-  document.querySelector('#root')
-);
+// Action creator
+export const selectSong = song => {
+  // Return an action
+  return {
+    type: 'SONG_SELECTED',
+    payload: song
+  };
+};
